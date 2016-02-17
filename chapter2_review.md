@@ -19,7 +19,7 @@ Multiprogramming is the execution of two or more computer programs witha single 
 Process is an instance of a computer program that can be assigend to and executed on a processor.
 
 ## 5. How is the execution context of a process used by the OS?
-Execution context is an internal data with which OS supervise and manage the process.
+Execution context is an internal data with which OS supervise and manage the process and the processor can execute the process effectively and efficiently. The execution context keeps record of various processor registers as well as entire state of process such as priority of process.
 
 ## 6. List and briefly explain five storage management responsibilities of a typical OS.
 * Process isolation: The OS must prevent interfering of independent processes memory with each other.
@@ -30,14 +30,14 @@ the jobs as required.
 * Long-term storage: OS should be able to store  some information after it is powered down.
 
 ## 7. Explain the distinction between a real address and a virtual address.
-Real address: 
+Real address: It is also known as physical address, where real layout of RAM is known by program.When any variable of a program is accessed at address suppose 453defa, this address is the real address of physical RAM where the variable is really stored. 
 
-
-
+Virtual address:In virtual address all application memory accesses are placed in a page table then these are mapped
+from virtual to physical address where each application has its own private address space. With the help of paging a program's physical RAM is stored on a disk.
+ 
 
 ## 8. Describe the round-robin scheduling technique.
-Round robin scheduling technique is a circular queue where each process is assign a fix time to execute and after that time the next process
-execute.
+Round robin scheduling technique is a circular queue where each process is assign a fix time to execute and after that time the next process execute.
 
 ## 9. Explain the difference between a monolithic kernel and a microkernel.
 Monolithic kernel: It includes most of the OS functions such as scheduling, file system, networking, device drivers, memory management and many more.It is used as a single process where all the elements share a same address space.
@@ -54,4 +54,3 @@ The key design issues for an SMP operating system are:
 * Synchronization
 * memory management
 * Reliability and fault tolerance
-
