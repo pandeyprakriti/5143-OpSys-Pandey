@@ -40,10 +40,9 @@ Round robin scheduling technique is a circular queue where each process is assig
 execute.
 
 ## 9. Explain the difference between a monolithic kernel and a microkernel.
-Monolithic kernel: It includes most of the OS functions such as scheduling, file system, networking, device drivers, memory management and many more.
-                    It is used as a single process where all the elements share a same address space.
-Microkernel: It includes only a few function of OS such as address spaces, interprocess communication, and dasic scheduling. Microkernel interacts
-with local and remote server processes in same way, which is well suited for distributed environment.
+Monolithic kernel: It includes most of the OS functions such as scheduling, file system, networking, device drivers, memory management and many more.It is used as a single process where all the elements share a same address space.
+
+Microkernel: It includes only a few function of OS such as address spaces, interprocess communication, and dasic scheduling. Microkernel interacts with local and remote server processes in same way, which is well suited for distributed environment.
 
 ## 10. What is multithreading?
 Multithreading is a way of dividing a process into a multiple threads that can run at a same time.
