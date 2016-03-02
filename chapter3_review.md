@@ -18,10 +18,11 @@ Three general categories of information in a process control block are
 *  Process control information
 
 ## 3.10 Why are two modes (user and kernel) needed?
-Kernel mode is associated with OS and it is needed for process management, memory managemant, I/O management and support function.
-User mode is needed to execute user programs.
 
 ## 3.12 What is the difference between an interrupt and a trap?
+Interrupt are caused by hardware interrupts usually from different sources such as hard disk, I/O ports, peripheral devices, timer chips, etc.Interrupt handler waits to happen them eventually hence interrupt are passive or asynchronous. Interrupt cannot be occurred by any events that are related to the executing program.
+
+Trap is a software generated interrupt that transfer the control initiated by programmer.Trap is always unconditional so the control will always transferred to the subroutine associated with the trap. As the user code continues after certain period of suspension so handling is synchronous.
 
 ## 3.13 Give three examples of an interrupt.
 Three examples of interrupt are
@@ -30,3 +31,6 @@ Three examples of interrupt are
 * Memory fault
 
 ## 3.14 What is the difference between a mode switch and a process switch?
+In process switch processor switches from one thread/process to another by saving cpu registers and instruction pointer of current program, the program stops executing by saving its state in memory and wait for the decision of kernel to execute it again. New program is loaded with new instruction pointer and registers. Program switch provides the illusion of multitasking by means of either hardware interrupt that occurs by devices such as mouse, keyboard etc. or by software switch that is occurred by manual task switching by kernel.
+
+In mode switch CPU changes the privilege levels. Mode switch occur without changing the state of currently running process. As the kernel works at  higher privilege then other standard user task, it is necessary that mode switch to be occurred in order to access resources for other user task that are controlled by the kernel. 
