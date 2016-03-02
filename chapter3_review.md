@@ -18,6 +18,10 @@ Three general categories of information in a process control block are
 *  Process control information
 
 ## 3.10 Why are two modes (user and kernel) needed?
+Kernel mode is associated with OS and it is needed for process management, memory managemant, I/O management and support function.
+
+User mode is needed to execute user programs.
+
 
 ## 3.12 What is the difference between an interrupt and a trap?
 Interrupt are caused by hardware interrupts usually from different sources such as hard disk, I/O ports, peripheral devices, timer chips, etc.Interrupt handler waits to happen them eventually hence interrupt are passive or asynchronous. Interrupt cannot be occurred by any events that are related to the executing program.
