@@ -1,0 +1,2 @@
+ The difference between threads1 and threads2 is: sharedCounter = 0, in threads2 is declaration of global variable and threadA and threadB access the same value. In thread1 there is no global value so threadA and threadB do not share the same value.
+ 
