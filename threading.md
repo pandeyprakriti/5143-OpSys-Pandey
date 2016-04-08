@@ -20,13 +20,13 @@ in threads2 there is declaration of global variable and threadA and threadB acce
 
 5. ThreadA and ThreadB both access a global variable; global sharedNumber as in code. In threadA; 
 
-sharedNumber = 1   if sharedNumber != 1:
+    sharedNumber = 1   if sharedNumber != 1:
 
-and in threadB;
+    and in threadB;
 
-sharedNumber = 2    if sharedNumber != 2:
+    sharedNumber = 2    if sharedNumber != 2:
 
-With this line of code; if threadA is interrupted after updating the value but before checking condition, threadB  might  generate the different value for sharedcounter and thraedA  might check condition with that value which is not the actual value for thraedA.
+     With this line of code; if threadA is interrupted after updating the value but before checking condition, threadB  might  generate       the different value for sharedcounter and thraedA  might check condition with that value which is not the actual value for threadA.
 
 6. Yes, uncommenting the lock operations solves the explicit race condition but it make the program slower.
 
