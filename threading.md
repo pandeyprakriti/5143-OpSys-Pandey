@@ -18,9 +18,10 @@ in threads2 there is declaration of global variable and threadA and threadB acce
 4. Ctrl-C does not terminate the program.The program is still running until it completes.
 
 
-5. ThreadA and ThreadB both access a global variable; global sharedNumber as in code. In thraedA; 
+5. ThreadA and ThreadB both access a global variable; global sharedNumber as in code. In threadA; 
 
 sharedNumber = 1   if sharedNumber != 1:
+
 and in threadB;
 
 sharedNumber = 2    if sharedNumber != 2:
