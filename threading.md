@@ -1,6 +1,6 @@
 ######Name: Prakriti Pandey
 ######Course: 5143 Operating Systems
-######Date: 16 Feb 2016 
+######Date: 08 April 2016 
 ######M:    20220596
 
 
@@ -18,11 +18,14 @@ in threads2 there is declaration of global variable and threadA and threadB acce
 4. Ctrl-C does not terminate the program.The program is still running until it completes.
 
 
-5. ThreadA and ThreadB both access a global varaible; global sharedNumber as in code. In thraedA; 
+5. ThreadA and ThreadB both access a global variable; global sharedNumber as in code. In thraedA; 
+
 sharedNumber = 1   if sharedNumber != 1:
 and in threadB;
+
 sharedNumber = 2    if sharedNumber != 2:
-With this line of code; if threadA is interrupted after updating the value but before checking condition, thraedB  might  generate the different value for sharedcounter and thraedA  might check condition with that value which is not the actual value for thraedA.
+
+With this line of code; if threadA is interrupted after updating the value but before checking condition, threadB  might  generate the different value for sharedcounter and thraedA  might check condition with that value which is not the actual value for thraedA.
 
 6. Yes, uncommenting the lock operations solves the explicit race condition but it make the program slower.
 
